@@ -9,7 +9,7 @@ const links = [
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/5 backdrop-blur-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md">
       <div className="mx-auto flex items-center px-10 py-4 gap-10">
         
         <ul className="flex gap-6">
@@ -18,10 +18,11 @@ export default function Navbar() {
               <NavLink
                 to={link.to}
                 className={({ isActive }) =>
-                  `text-primary ${isActive ? 'font-bold' : ''}`
+                  `relative text-primary ${isActive ? 'font-bold' : ''} group`
                 }
               >
                 {link.label}
+                <span className="absolute left-0 -bottom-0.5 h-px w-0 bg-primary transition-all duration-300 ease-out group-hover:w-full" />
               </NavLink>
             </li>
           ))}

@@ -4,7 +4,8 @@ const WIDTH = 1287
 const WAVE_CENTER = 30
 const SVG_HEIGHT = 120
 const POINTS = 200
-const SPEED = 0.0003
+const SPEED1 = 0.0002
+const SPEED2 = 0.0006
 const AMPLITUDE = 20
 const FREQUENCY = 3
 const GAP = 6
@@ -48,13 +49,14 @@ export default function WaveDivider() {
   useEffect(() => {
     let animationId
     const animate = (time) => {
-      const t = time * SPEED
-      if (fill1Ref.current) fill1Ref.current.setAttribute('d', generateFill(t, 0))
-      if (top1Ref.current) top1Ref.current.setAttribute('d', generateLine(t, 0, -GAP))
-      if (bot1Ref.current) bot1Ref.current.setAttribute('d', generateLine(t, 0, GAP))
-      if (fill2Ref.current) fill2Ref.current.setAttribute('d', generateFill(t, Math.PI))
-      if (top2Ref.current) top2Ref.current.setAttribute('d', generateLine(t, Math.PI, -GAP))
-      if (bot2Ref.current) bot2Ref.current.setAttribute('d', generateLine(t, Math.PI, GAP))
+      const t1 = time * SPEED1
+      const t2 = time * SPEED2
+      if (fill1Ref.current) fill1Ref.current.setAttribute('d', generateFill(t1, 0))
+      if (top1Ref.current) top1Ref.current.setAttribute('d', generateLine(t1, 0, -GAP))
+      if (bot1Ref.current) bot1Ref.current.setAttribute('d', generateLine(t1, 0, GAP))
+      if (fill2Ref.current) fill2Ref.current.setAttribute('d', generateFill(t2, Math.PI))
+      if (top2Ref.current) top2Ref.current.setAttribute('d', generateLine(t2, Math.PI, -GAP))
+      if (bot2Ref.current) bot2Ref.current.setAttribute('d', generateLine(t2, Math.PI, GAP))
       animationId = requestAnimationFrame(animate)
     }
     animationId = requestAnimationFrame(animate)

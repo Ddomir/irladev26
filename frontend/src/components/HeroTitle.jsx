@@ -93,7 +93,7 @@ export default function HeroTitle() {
       >
         <text
           x="50%"
-          y="55%"
+          y="57%"
           dominantBaseline="middle"
           textAnchor="middle"
           className="font-mrdafoe"

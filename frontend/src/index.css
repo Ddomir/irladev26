@@ -37,6 +37,24 @@
   }
 }
 
+@keyframes orbit {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes counter-orbit {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
+}
+
+@utility animate-orbit {
+  animation: orbit 30s linear infinite;
+}
+
+@utility animate-counter-orbit {
+  animation: counter-orbit 30s linear infinite;
+}
+
 html {
   background-color: #060B44;
 }

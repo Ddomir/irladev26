@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import WaveDivider from '../components/WaveDivider'
 import ExperienceCard from '../components/ExperienceCard'
 import HeroTitle from '../components/HeroTitle'
+import ContactMarquee from '../components/ContactMarquee'
 import acmImg from '../assets/ACM.png'
 import edtImg from '../assets/EDT.png'
 import sparkImg from '../assets/SparkHacks.png'
@@ -85,9 +86,11 @@ export default function About() {
 
       <WaveDivider />
 
-      <section className='relative py-15 px-10 mb-15'>
+      <section className='relative pt-15 px-10 bg-linear-to-b from-background to-slate-900'>
         <h2 className="text-primary text-4xl font-semibold text-center mb-2">Contact Me</h2>
-        <p className='text-primary text-lg text-center mb-14'>Let's get in touch!</p>
+        <p className='text-primary text-lg text-center mb-16'>Let's get in touch!</p>
+
+        <ContactMarquee />
       </section>
       </div>
 

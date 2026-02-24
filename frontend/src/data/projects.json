@@ -16,14 +16,6 @@
    "description": "Multiplayer Java client-server game using threading for real-time matches."
  },
  {
-   "id": 3,
-   "title": "irla.dev",
-   "date": "January, 2025",
-   "link": "https://github.com/Ddomir/irladev",
-   "thumbnail": "/ProjectThumbnails/irladevTN.png",
-   "description": "The website you're looking at! Fully open-source."
- },
- {
    "id": 4,
    "title": "Liteboard",
    "date": "February, 2025",

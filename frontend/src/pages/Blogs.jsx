@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import posts from '../data/blogs.json'
+import ProjectGridBg from '../components/ProjectGridBg'
 import ModelPredictorTN from '../assets/ProjectThumbnails/ModelPredictorTN.png'
 import PogodaTN from '../assets/ProjectThumbnails/PogodaTN.png'
 import ArbitragePerformance from '../assets/BlogImages/ArbitragePairsTrading/performance_KO_PEP.png'
@@ -20,7 +21,8 @@ function resolveImage(path) {
 
 export default function Blogs() {
   return (
-    <section className="pt-20 px-10 pb-20">
+    <section className="relative pt-10 px-10 pb-20 overflow-hidden">
+      <ProjectGridBg />
       <h2 className="text-primary text-4xl font-semibold text-center mb-14">Blogs</h2>
       <div className="max-w-3xl mx-auto space-y-4">
         {posts.map((post, i) => {

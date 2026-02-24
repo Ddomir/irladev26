@@ -11,7 +11,7 @@ export default function BlogLayout({ title, description, date, image, children }
           <p className="text-primary/60 text-lg">{description}</p>
         )}
         {image && (
-          <img src={image} alt={title} className="w-full rounded-2xl mt-8 object-cover" />
+          <img src={image} alt={title} className="w-full rounded-2xl mt-8 object-cover hover:scale-101 transition-transform" />
         )}
       </header>
 

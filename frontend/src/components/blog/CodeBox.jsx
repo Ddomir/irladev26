@@ -16,7 +16,7 @@ export default function CodeBox({ language, code, output, scrollableOutput = fal
   }
 
   return (
-    <div className="rounded-xl overflow-hidden border border-secondary/20 mb-4 mx-0 sm:mx-8">
+    <div className="rounded-xl overflow-hidden border border-secondary/20 mb-4 mx-0 sm:mx-8 hover:scale-101 transition-transform">
       {/* Header */}
       <div className="bg-background/40 text-primary px-4 py-2 text-sm font-semibold flex justify-between items-center">
         <span>{language}</span>

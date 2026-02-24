@@ -16,8 +16,15 @@
   {
     "title": "Arbitrage Pairs Trading",
     "description": "Market-neutral statistical arbitrage using cointegrated stock pairs.",
-    "date": "February, 2026",
+    "date": "November, 2026",
     "url": "/blogs/arbitrage",
     "image": "/BlogImages/ArbitragePairsTrading/performance_KO_PEP.png"
+  },
+  {
+    "title": "VIX Scaled Enhanced DCA Trading with Cuda Acceleration",
+    "description": "Does buying more during market crashes beat a fixed weekly investment? 100,000 GPU simulations find out.",
+    "date": "February, 2026",
+    "url": "/blogs/dca-vix-cuda",
+    "image": "/BlogImages/DCAVIXCuda/vix_triggers.png"
   }
 ]

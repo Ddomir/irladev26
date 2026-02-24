@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import Blogs from './pages/Blogs'
 import RevenuePredictorBlog from './pages/Blogs/RevenuePredictorBlog'
 import PogodaBlog from './pages/Blogs/PogodaBlog'
+import ArbitrageBlog from './pages/Blogs/ArbitrageBlog'
 import Projects from './pages/Projects'
 import About from './pages/About'
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/blogs/revenue-predictor" element={<RevenuePredictorBlog />} />
           <Route path="/blogs/pogoda" element={<PogodaBlog />} />
+          <Route path="/blogs/arbitrage" element={<ArbitrageBlog />} />
         </Routes>
       </main>
       <Footer />

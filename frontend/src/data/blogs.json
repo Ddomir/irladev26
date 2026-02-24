@@ -12,5 +12,12 @@
     "date": "March, 2025",
     "url": "/blogs/pogoda",
     "image": "/ProjectThumbnails/PogodaTN.png"
+  },
+  {
+    "title": "Arbitrage Pairs Trading",
+    "description": "Market-neutral statistical arbitrage using cointegrated stock pairs.",
+    "date": "February, 2026",
+    "url": "/blogs/arbitrage",
+    "image": "/BlogImages/ArbitragePairsTrading/performance_KO_PEP.png"
   }
 ]

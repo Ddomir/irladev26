@@ -2,10 +2,12 @@ import { Link } from 'react-router-dom'
 import posts from '../data/blogs.json'
 import ModelPredictorTN from '../assets/ProjectThumbnails/ModelPredictorTN.png'
 import PogodaTN from '../assets/ProjectThumbnails/PogodaTN.png'
+import ArbitragePerformance from '../assets/BlogImages/ArbitragePairsTrading/performance_KO_PEP.png'
 
 const images = {
   'ModelPredictorTN.png': ModelPredictorTN,
   'PogodaTN.png': PogodaTN,
+  'performance_KO_PEP.png': ArbitragePerformance,
 }
 
 function resolveImage(path) {

@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom'
 import posts from '../data/blogs.json'
 import ModelPredictorTN from '../assets/ProjectThumbnails/ModelPredictorTN.png'
+import PogodaTN from '../assets/ProjectThumbnails/PogodaTN.png'
 
 const images = {
   'ModelPredictorTN.png': ModelPredictorTN,
+  'PogodaTN.png': PogodaTN,
 }
 
 function resolveImage(path) {

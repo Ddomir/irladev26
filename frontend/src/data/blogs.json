@@ -5,5 +5,12 @@
     "date": "July, 2025",
     "url": "/blogs/revenue-predictor",
     "image": "/ProjectThumbnails/ModelPredictorTN.png"
+  },
+  {
+    "title": "Designing an App",
+    "description": "Dynamic Web App Using NWS/EPA API.",
+    "date": "March, 2025",
+    "url": "/blogs/pogoda",
+    "image": "/ProjectThumbnails/PogodaTN.png"
   }
 ]

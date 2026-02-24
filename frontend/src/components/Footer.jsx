@@ -10,7 +10,7 @@ const links = [
 export default function Footer() {
   return (
     <nav className="z-50">
-      <div className="mx-auto flex items-center px-10 py-4 gap-10 bg-slate-900">
+      <div className="mx-auto flex items-center px-10 py-4 gap-10">
         <NavLink to="/" className="text-xl font-bold text-accent">
           <Plus strokeWidth={1}/>
         </NavLink>

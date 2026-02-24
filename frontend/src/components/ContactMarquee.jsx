@@ -2,10 +2,10 @@ import { useRef, useEffect, useCallback } from 'react'
 import { Instagram, Linkedin, Github, Mail } from 'lucide-react'
 
 const LINKS = [
-  { label: 'Instagram', url: 'https://instagram.com', icon: Instagram },
-  { label: 'LinkedIn', url: 'https://linkedin.com', icon: Linkedin },
-  { label: 'GitHub', url: 'https://github.com', icon: Github },
-  { label: 'Email', url: 'mailto:hello@example.com', icon: Mail },
+  { label: 'Instagram', url: 'https://www.instagram.com/irladom/', icon: Instagram },
+  { label: 'LinkedIn', url: 'https://www.linkedin.com/in/dominic-irla/', icon: Linkedin },
+  { label: 'GitHub', url: 'https://github.com/Ddomir', icon: Github },
+  { label: 'Email', url: 'mailto:irladominic@gmail.com', icon: Mail },
 ]
 
 const ITEMS = [...LINKS, ...LINKS, ...LINKS, ...LINKS, ...LINKS, ...LINKS, ...LINKS, ...LINKS, ...LINKS, ...LINKS]
@@ -14,7 +14,7 @@ const SPEED = 0.5
 const BASE_PX = 24
 const MAX_EXTRA_PX = 32
 const INFLUENCE_RADIUS = 200
-const LERP_SPEED = 0.08 // how fast pills ease toward target (0–1, lower = smoother)
+const LERP_SPEED = 0.08
 
 export default function ContactMarquee() {
   const trackRef = useRef(null)
@@ -22,7 +22,7 @@ export default function ContactMarquee() {
   const rafRef = useRef(null)
   const mouseRef = useRef({ x: -9999, y: -9999 })
   const pillRefs = useRef([])
-  // Per-pill current extra padding (lerped)
+
   const pillExtras = useRef([])
 
   const animate = useCallback(() => {
@@ -44,7 +44,6 @@ export default function ContactMarquee() {
     pillRefs.current.forEach((pill, i) => {
       if (!pill) return
 
-      // Initialize lerped value if needed
       if (pillExtras.current[i] === undefined) pillExtras.current[i] = 0
 
       const rect = pill.getBoundingClientRect()
@@ -52,17 +51,14 @@ export default function ContactMarquee() {
       const cy = rect.top + rect.height / 2
       const dist = Math.sqrt((mx - cx) ** 2 + (my - cy) ** 2)
 
-      // Target extra padding
       let target = 0
       if (dist < INFLUENCE_RADIUS) {
         const t = 1 - dist / INFLUENCE_RADIUS
         target = MAX_EXTRA_PX * (t * t * (3 - 2 * t))
       }
 
-      // Lerp toward target
       pillExtras.current[i] += (target - pillExtras.current[i]) * LERP_SPEED
 
-      // Snap to 0 when close enough to avoid endless tiny updates
       if (pillExtras.current[i] < 0.1) pillExtras.current[i] = 0
 
       const px = BASE_PX + pillExtras.current[i]

@@ -1,0 +1,50 @@
+[
+ {
+   "id": 1,
+   "title": "Revenue Predictor",
+   "date": "July, 2025",
+   "link": "https://github.com/Ddomir/Revenue-Predictor",
+   "thumbnail": "ProjectThumbnails/Connect4OnlineTN.png",
+   "description": "Predicting revenue based on historical data using machine learning."
+ },
+ {
+   "id": 2,
+   "title": "Connect 4 Online",
+   "date": "January, 2025",
+   "link": "https://github.com/Ddomir/Connect4Online",
+   "thumbnail": "/ProjectThumbnails/Connect4OnlineTN.png",
+   "description": "Multiplayer Java client-server game using threading for real-time matches."
+ },
+ {
+   "id": 3,
+   "title": "irla.dev",
+   "date": "January, 2025",
+   "link": "https://github.com/Ddomir/irladev",
+   "thumbnail": "/ProjectThumbnails/irladevTN.png",
+   "description": "The website you're looking at! Fully open-source."
+ },
+ {
+   "id": 4,
+   "title": "Liteboard",
+   "date": "February, 2025",
+   "link": "https://github.com/AdamAubs/spark-hacks-2025",
+   "thumbnail": "/ProjectThumbnails/LiteboardTN.png",
+   "description": "Concept classroom UI created in 24 hours for UIC Sparkhacks 2025."
+ },
+ {
+   "id": 6,
+   "title": "Pogoda",
+   "date": "March, 2025",
+   "link": "https://github.com/Ddomir/Pogoda",
+   "thumbnail": "/ProjectThumbnails/PogodaTN.png",
+   "description": "Dynamic concept JavaFX weather app using NWS/EPA API."
+ },
+ {
+   "id": 7,
+   "title": "Trope Search",
+   "date": "November, 2025",
+   "link": "https://github.com/SelomTetedje/TropeSearch",
+   "thumbnail": "/ProjectThumbnails/TropeSearchTN.png",
+   "description": "Movie filtering website catalog made with UX studies."
+ }
+]

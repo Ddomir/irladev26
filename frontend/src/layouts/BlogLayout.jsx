@@ -1,6 +1,6 @@
 export default function BlogLayout({ title, description, date, image, children }) {
   return (
-    <article className="pt-24 pb-20 px-6 max-w-3xl mx-auto">
+    <article className="pt-10 pb-20 px-6 max-w-3xl mx-auto">
       {/* Header */}
       <header className="mb-12">
         {date && (

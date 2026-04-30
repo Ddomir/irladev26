@@ -7,6 +7,7 @@ import acmImg from '../assets/Experiences/ACM.png'
 import edtImg from '../assets/Experiences/EDT.png'
 import sparkImg from '../assets/Experiences/SparkHacks.png'
 import uicImg from '../assets/Experiences/UICENG.png'
+import wtseImg from '../assets/Experiences/WTSE.jpeg'
 
 const PARALLAX_SPEED = 0.4
 const MD = 768
@@ -76,6 +77,7 @@ export default function About() {
             { image: edtImg, title: 'EDT', description: 'Engineering Design Team Member: Part of the AiR team, creating automated drones through YOLO. Also, created their website.', date: 'AUG 2024 - NOW' },
             { image: sparkImg, title: 'SparkHacks', description: "On the webdev team for Chicago's largest hackathon! Created a dashboard for 700+ applicants, and helped run the event.", date: 'OCT 2025 - FEB 2026' },
             { image: uicImg, title: 'UIC Engineering', description: "Creating internal tools for UIC's engineering department.", date: 'AUG 2024 - NOW' },
+            { image: wtseImg, title: 'Wearable Technology & Sensory Environment Lab', description: 'Designing serious/therapeutical games for patients with tongue mobility issues using a wearable retainer with a trackpad for tongue tracking.'}
           ].map((exp, i) => (
             <div
               key={i}

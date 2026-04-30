@@ -38,5 +38,12 @@
    "link": "https://github.com/SelomTetedje/TropeSearch",
    "thumbnail": "/ProjectThumbnails/TropeSearchTN.png",
    "description": "Movie filtering website catalog made with UX studies."
+ },
+ {
+  "id": 8,
+  "title": "Neural Field Simulator (WebGPU)",
+  "link": "https://ddomir.github.io/Web-NeuralFieldSimulator/",
+  "thumbnail":"/ProjectThumbnails/WebNeuralSimTN.png",
+  "description": "WebGPU accelerated simulator of neural dynamics."
  }
 ]

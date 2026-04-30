@@ -6,6 +6,7 @@ import LiteboardTN from '../assets/ProjectThumbnails/LiteboardTN.png'
 import PogodaTN from '../assets/ProjectThumbnails/PogodaTN.png'
 import ModelPredictorTN from '../assets/ProjectThumbnails/ModelPredictorTN.png'
 import TropeSearchTN from '../assets/ProjectThumbnails/TropeSearchTN.png'
+import WebNeuralSimTN from '../assets/ProjectThumbnails/WebNeuralSimTN.png'
 
 const thumbnails = {
   'Connect4OnlineTN.png': Connect4OnlineTN,
@@ -14,6 +15,7 @@ const thumbnails = {
   'PogodaTN.png': PogodaTN,
   'ModelPredictorTN.png': ModelPredictorTN,
   'TropeSearchTN.png': TropeSearchTN,
+  'WebNeuralSimTN.png': WebNeuralSimTN,
 }
 
 function resolveThumbnail(path) {

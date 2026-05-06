@@ -1,49 +1,58 @@
 [
- {
-   "id": 1,
-   "title": "Revenue Predictor",
-   "date": "July, 2025",
-   "link": "https://github.com/Ddomir/Revenue-Predictor",
-   "thumbnail": "ProjectThumbnails/Connect4OnlineTN.png",
-   "description": "Predicting revenue based on historical data using machine learning."
- },
- {
-   "id": 2,
-   "title": "Connect 4 Online",
-   "date": "January, 2025",
-   "link": "https://github.com/Ddomir/Connect4Online",
-   "thumbnail": "/ProjectThumbnails/Connect4OnlineTN.png",
-   "description": "Multiplayer Java client-server game using threading for real-time matches."
- },
- {
-   "id": 4,
-   "title": "Liteboard",
-   "date": "February, 2025",
-   "link": "https://github.com/AdamAubs/spark-hacks-2025",
-   "thumbnail": "/ProjectThumbnails/LiteboardTN.png",
-   "description": "Concept classroom UI created in 24 hours for UIC Sparkhacks 2025."
- },
- {
-   "id": 6,
-   "title": "Pogoda",
-   "date": "March, 2025",
-   "link": "https://github.com/Ddomir/Pogoda",
-   "thumbnail": "/ProjectThumbnails/PogodaTN.png",
-   "description": "Dynamic concept JavaFX weather app using NWS/EPA API."
- },
- {
-   "id": 7,
-   "title": "Trope Search",
-   "date": "November, 2025",
-   "link": "https://github.com/SelomTetedje/TropeSearch",
-   "thumbnail": "/ProjectThumbnails/TropeSearchTN.png",
-   "description": "Movie filtering website catalog made with UX studies."
- },
- {
-  "id": 8,
-  "title": "Neural Field Simulator (WebGPU)",
-  "link": "https://ddomir.github.io/Web-NeuralFieldSimulator/",
-  "thumbnail":"/ProjectThumbnails/WebNeuralSimTN.png",
-  "description": "WebGPU accelerated simulator of neural dynamics."
- }
+  {
+    "title": "Neural Field Simulator",
+    "date": "April, 2026",
+    "link": "https://ddomir.github.io/Web-NeuralFieldSimulator/",
+    "thumbnail": "WebNeuralSimTN.png",
+    "description": "WebGPU accelerated simulator of neural dynamics."
+  },
+  {
+    "title": "LinksIt",
+    "date": "March, 2026",
+    "link": "https://www.linksit.us/",
+    "thumbnail": "LinksItTN.png",
+    "description": "Room based link sharing platform for organizations."
+  },
+  {
+    "title": "Sparkhacks 2026",
+    "date": "February, 2026",
+    "link": "https://www.sparkhacks.org/",
+    "thumbnail": "Sparkhack26TN.png",
+    "description": "Hosting Chicago's largest hackathon (300+ participants). Also created its dashboard and landing site."
+  },
+  {
+    "title": "Trope Search",
+    "date": "November, 2025",
+    "link": "https://github.com/SelomTetedje/TropeSearch",
+    "thumbnail": "TropeSearchTN.png",
+    "description": "Movie filtering website catalog made with UX studies."
+  },
+  {
+    "title": "Revenue Predictor",
+    "date": "July, 2025",
+    "link": "https://github.com/Ddomir/Revenue-Predictor",
+    "thumbnail": "ModelPredictorTN.png",
+    "description": "Predicting revenue based on historical data using machine learning."
+  },
+  {
+    "title": "Pogoda",
+    "date": "March, 2025",
+    "link": "https://github.com/Ddomir/Pogoda",
+    "thumbnail": "PogodaTN.png",
+    "description": "Dynamic concept JavaFX weather app using NWS/EPA API."
+  },
+  {
+    "title": "Liteboard",
+    "date": "February, 2025",
+    "link": "https://github.com/AdamAubs/spark-hacks-2025",
+    "thumbnail": "LiteboardTN.png",
+    "description": "Concept classroom UI created in 24 hours for UIC Sparkhacks 2025."
+  },
+  {
+    "title": "Connect 4 Online",
+    "date": "January, 2025",
+    "link": "https://github.com/Ddomir/Connect4Online",
+    "thumbnail": "Connect4OnlineTN.png",
+    "description": "Multiplayer Java client-server game using threading for real-time matches."
+  }
 ]

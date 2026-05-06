@@ -7,6 +7,8 @@ import PogodaTN from '../assets/ProjectThumbnails/PogodaTN.png'
 import ModelPredictorTN from '../assets/ProjectThumbnails/ModelPredictorTN.png'
 import TropeSearchTN from '../assets/ProjectThumbnails/TropeSearchTN.png'
 import WebNeuralSimTN from '../assets/ProjectThumbnails/WebNeuralSimTN.png'
+import LinksItTN from '../assets/ProjectThumbnails/LinksItTN.png'
+import SparkhackTN from '../assets/ProjectThumbnails/Sparkhack26TN.png'
 
 const thumbnails = {
   'Connect4OnlineTN.png': Connect4OnlineTN,
@@ -16,50 +18,47 @@ const thumbnails = {
   'ModelPredictorTN.png': ModelPredictorTN,
   'TropeSearchTN.png': TropeSearchTN,
   'WebNeuralSimTN.png': WebNeuralSimTN,
+  'LinksItTN.png': LinksItTN,
+  'Sparkhack26TN.png': SparkhackTN,
 }
-
-function resolveThumbnail(path) {
-  if (!path) return null
-  const filename = path.split('/').pop()
-  return thumbnails[filename] ?? null
-}
-
-const midIndex = Math.ceil(projects.length / 2)
-const firstColumn = projects.slice(0, midIndex)
-const secondColumn = projects.slice(midIndex)
 
 export default function ProjectGallery() {
   return (
-    <div className="px-10 mb-8 max-w-4xl mx-auto">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-      {[firstColumn, secondColumn].map((col, ci) => (
-        <div key={ci} className="flex flex-col gap-4">
-          {col.map((project, i) => {
-            const thumb = resolveThumbnail(project.thumbnail)
-            return (
-              <a
-                key={i}
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group rounded-2xl border border-secondary/30 overflow-hidden hover:border-secondary transition-colors duration-300"
-              >
-                <div className="w-full aspect-video bg-linear-to-br from-secondary/30 to-secondary/10 overflow-hidden">
-                  {thumb
-                    ? <img src={thumb} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    : <div className="w-full h-full" />
-                  }
+    <div className="px-6 mb-12 max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {projects.map((project) => {
+          const thumb = thumbnails[project.thumbnail] ?? null
+          return (
+            <a
+              key={project.title}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col rounded-xl border border-secondary/20 overflow-hidden hover:border-secondary/60 hover:shadow-lg hover:shadow-secondary/10 transition-all duration-300 bg-secondary/5"
+            >
+              <div className="w-full aspect-video overflow-hidden bg-secondary/10">
+                {thumb ? (
+                  <img
+                    src={thumb}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center text-secondary/30 text-xs uppercase tracking-widest">
+                    No Preview
+                  </div>
+                )}
+              </div>
+              <div className="flex flex-col flex-1 p-4 gap-1">
+                <div className="flex items-start justify-between gap-2">
+                  <h2 className="font-semibold text-base text-primary leading-tight">{project.title}</h2>
+                  <span className="text-xs text-secondary/60 whitespace-nowrap pt-0.5">{project.date}</span>
                 </div>
-                <div className="p-4 text-center bg-secondary/5">
-                  <h2 className="font-semibold text-lg text-primary">{project.title}</h2>
-                  <p className="mt-1 text-sm text-primary/60">{project.description}</p>
-                  <p className="text-xs font-medium uppercase text-secondary mt-2 tracking-widest">{project.date}</p>
-                </div>
-              </a>
-            )
-          })}
-        </div>
-      ))}
+                <p className="text-sm text-primary/50 leading-snug">{project.description}</p>
+              </div>
+            </a>
+          )
+        })}
       </div>
     </div>
   )

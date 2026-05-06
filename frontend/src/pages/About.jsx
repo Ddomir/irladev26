@@ -10,6 +10,8 @@ import sparkImg from '../assets/Experiences/SparkHacks.png'
 import uicImg from '../assets/Experiences/UICENG.png'
 import wtseImg from '../assets/Experiences/WTSE.jpeg'
 
+
+
 const PARALLAX_SPEED = 0.4
 const MD = 768
 
@@ -70,34 +72,34 @@ export default function About() {
       <WaveDivider />
 
       {/* Freelance + Resume */}
-      <section className="relative py-8 px-10 max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8">
-        {/* Freelance */}
-        <div className="flex flex-col gap-4 p-8 rounded-2xl border border-secondary/20 bg-secondary/5">
-          <h3 className="text-primary text-xl font-semibold">Available for Freelance</h3>
-          <p className="text-primary/60 text-sm leading-relaxed">
-            I take on freelance projects for people in and around the Chicago area: websites, tools, dashboards, and anything in between. If you have something in mind, reach out and let's talk about it.
+      <section className="relative py-16 px-10 max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-16">
+        {/* Freelance — drifting wave */}
+        <div className="relative flex flex-col gap-5">
+          <h3 className="relative text-primary text-2xl font-semibold">Available for Freelance</h3>
+          <p className="relative text-primary/60 text-sm leading-relaxed">
+            I take on freelance projects for people in and around the Chicago area — websites, tools, dashboards, and anything in between. If you have something in mind, reach out.
           </p>
           <a
             href="mailto:irladominic@gmail.com"
-            className="mt-auto inline-block text-center px-5 py-2.5 rounded-xl border border-secondary/40 text-primary text-sm font-medium hover:border-secondary hover:bg-secondary/10 transition-all duration-300"
+            className="relative w-fit text-secondary text-sm font-medium tracking-widest uppercase border-b border-secondary/40 hover:border-secondary pb-0.5 transition-colors duration-300"
           >
-            Get in Touch
+            Get in Touch →
           </a>
         </div>
 
-        {/* Resume */}
-        <div className="flex flex-col gap-4 p-8 rounded-2xl border border-secondary/20 bg-secondary/5">
-          <h3 className="text-primary text-xl font-semibold">For Employers</h3>
-          <p className="text-primary/60 text-sm leading-relaxed">
+        {/* Resume — rotating star */}
+        <div className="relative flex flex-col gap-5">
+          <h3 className="relative text-primary text-2xl font-semibold">For Employers</h3>
+          <p className="relative text-primary/60 text-sm leading-relaxed">
             Looking to hire? My resume covers my experience, skills, and what I've been building. Feel free to open or download it.
           </p>
           <a
             href={resumePDF}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-auto inline-block text-center px-5 py-2.5 rounded-xl border border-secondary/40 text-primary text-sm font-medium hover:border-secondary hover:bg-secondary/10 transition-all duration-300"
+            className="relative w-fit text-secondary text-sm font-medium tracking-widest uppercase border-b border-secondary/40 hover:border-secondary pb-0.5 transition-colors duration-300"
           >
-            View Resume
+            View Resume →
           </a>
         </div>
       </section>
@@ -108,7 +110,7 @@ export default function About() {
         <div className={`flex flex-col items-center ${isDesktop ? 'gap-12' : 'gap-10'}`}>
           {[
             { image: acmImg, title: 'ACM @ UIC', description: 'Association of Computer Machining Special Interest Group Leader: Teach UIC students web development through group projects, lectures, and one on one help.', date: 'AUG 2025 - NOW' },
-            { image: edtImg, title: 'EDT', description: 'Engineering Design Team Member: Part of the AiR team, creating automated drones through YOLO. Also, created their website.', date: 'AUG 2024 - NOW' },
+            { image: edtImg, title: 'EDT', description: 'Engineering Design Team Member: Part of the AiR team, creating automated drones through YOLO. Also, created their website.', date: 'AUG 2024 - DEC 2025' },
             { image: sparkImg, title: 'SparkHacks', description: "On the webdev team for Chicago's largest hackathon! Created a dashboard for 700+ applicants, and helped run the event.", date: 'OCT 2025 - FEB 2026' },
             { image: uicImg, title: 'UIC Engineering', description: "Creating internal tools for UIC's engineering department.", date: 'AUG 2024 - NOW' },
             { image: wtseImg, title: 'Wearable Technology & Sensory Environment Lab', description: 'Designing serious/therapeutical games for patients with tongue mobility issues using a wearable retainer with a trackpad for tongue tracking.'}

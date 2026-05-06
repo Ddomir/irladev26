@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://irla.dev/sitemap.xml

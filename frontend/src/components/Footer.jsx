@@ -9,11 +9,11 @@ const links = [
 
 export default function Footer() {
   return (
-    <nav className="z-50">
+    <nav className="relative z-1">
       <div className="mx-auto flex items-center px-10 py-4 gap-10">
-        <NavLink to="/" className="text-xl font-bold text-accent">
+        <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-xl font-bold text-accent cursor-pointer">
           <Plus strokeWidth={1}/>
-        </NavLink>
+        </button>
         <span className="flex-1 h-px bg-primary"/>
 
         

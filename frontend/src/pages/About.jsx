@@ -3,6 +3,7 @@ import WaveDivider from '../components/WaveDivider'
 import ExperienceCard from '../components/ExperienceCard'
 import HeroTitle from '../components/HeroTitle'
 import ContactMarquee from '../components/ContactMarquee'
+import resumePDF from '../assets/Dominic_Irla_Resume_26-1.pdf'
 import acmImg from '../assets/Experiences/ACM.png'
 import edtImg from '../assets/Experiences/EDT.png'
 import sparkImg from '../assets/Experiences/SparkHacks.png'
@@ -67,6 +68,39 @@ export default function About() {
       {/* Divider + Experiences scroll over the hero */}
       <div className="relative z-10">
       <WaveDivider />
+
+      {/* Freelance + Resume */}
+      <section className="relative py-8 px-10 max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8">
+        {/* Freelance */}
+        <div className="flex flex-col gap-4 p-8 rounded-2xl border border-secondary/20 bg-secondary/5">
+          <h3 className="text-primary text-xl font-semibold">Available for Freelance</h3>
+          <p className="text-primary/60 text-sm leading-relaxed">
+            I take on freelance projects for people in and around the Chicago area: websites, tools, dashboards, and anything in between. If you have something in mind, reach out and let's talk about it.
+          </p>
+          <a
+            href="mailto:irladominic@gmail.com"
+            className="mt-auto inline-block text-center px-5 py-2.5 rounded-xl border border-secondary/40 text-primary text-sm font-medium hover:border-secondary hover:bg-secondary/10 transition-all duration-300"
+          >
+            Get in Touch
+          </a>
+        </div>
+
+        {/* Resume */}
+        <div className="flex flex-col gap-4 p-8 rounded-2xl border border-secondary/20 bg-secondary/5">
+          <h3 className="text-primary text-xl font-semibold">For Employers</h3>
+          <p className="text-primary/60 text-sm leading-relaxed">
+            Looking to hire? My resume covers my experience, skills, and what I've been building. Feel free to open or download it.
+          </p>
+          <a
+            href={resumePDF}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-auto inline-block text-center px-5 py-2.5 rounded-xl border border-secondary/40 text-primary text-sm font-medium hover:border-secondary hover:bg-secondary/10 transition-all duration-300"
+          >
+            View Resume
+          </a>
+        </div>
+      </section>
 
       {/* Experiences */}
       <section className="relative py-15 px-10 mb-15">

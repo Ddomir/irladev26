@@ -12,9 +12,10 @@ import About from './pages/About'
 function App() {
   return (
     <BrowserRouter>
-    <div className="bg-background font-mada">
+    <div className="relative bg-background font-mada">
+      <div className="absolute inset-0 pointer-events-none z-0" style={{ background: 'linear-gradient(to bottom, #060B44 0%, #040933 100%)' }} />
       <Navbar />
-      <main className="pt-16 min-h-screen">
+      <main className="relative z-1 pt-16 min-h-screen">
         <Routes>
           <Route path="/" element={<About />} />
           <Route path="/projects" element={<Projects />} />

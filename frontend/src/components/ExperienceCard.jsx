@@ -40,9 +40,13 @@ const STAR_CONFIG = [
     { Star: FourPointStar, position: '-top-4 -right-4', size: 36, rotate: -18 },
     { Star: FourPointStar, position: '-bottom-5 -left-5', size: 40, rotate: 25 },
   ],
+  // Card 4: 6-point TR
+  [
+    { Star: SixPointStar, position: '-top-6 -right-6', size: 48, rotate: -10 },
+  ],
 ]
 
-export default function ExperienceCard({ image, title, description, date, index }) {
+export default function ExperienceCard({ image, wide, title, description, date, index }) {
   const ref = useRef(null)
   const pos = useRef({ x: 0, y: 0 })
   const target = useRef({ x: 0, y: 0 })
@@ -117,7 +121,7 @@ export default function ExperienceCard({ image, title, description, date, index 
   if (!isDesktop) {
     return (
       <div className="flex flex-col items-center text-center gap-4">
-        {imageWithStars("w-52 h-52 rounded-2xl object-cover shadow-lg transition-transform duration-300 hover:scale-105")}
+        {imageWithStars(`${wide ? "w-full max-w-sm h-52" : "w-52 h-52"} rounded-2xl object-cover shadow-lg transition-transform duration-300 hover:scale-105`)}
         <h3 className="text-primary text-2xl font-semibold">{title}</h3>
         <p className="text-primary text-sm leading-relaxed max-w-xs">{description}</p>
         <p className="text-secondary text-sm font-semibold">{date}</p>
@@ -131,7 +135,7 @@ export default function ExperienceCard({ image, title, description, date, index 
       className={`flex items-center gap-8 ${reversed ? 'flex-row-reverse' : ''}`}
       style={{ willChange: 'transform' }}
     >
-      {imageWithStars("w-72 h-72 rounded-2xl object-cover shadow-lg transition-transform duration-300 hover:scale-105")}
+      {imageWithStars(`${wide ? "w-[28rem] h-72" : "w-72 h-72"} rounded-2xl object-cover shadow-lg transition-transform duration-300 hover:scale-105`)}
       <div className={`max-w-xs ${reversed ? 'text-right' : 'text-left'}`}>
         <h3 className="text-primary text-2xl font-semibold mb-2">{title}</h3>
         <p className="text-primary text-sm leading-relaxed">{description}</p>

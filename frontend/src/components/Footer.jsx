@@ -1,11 +1,4 @@
-import { NavLink } from 'react-router-dom'
 import { Plus } from 'lucide-react'
-
-const links = [
-  { label: 'About', to: '/' },
-  { label: 'Projects', to: '/projects' },
-  { label: 'Blogs', to: '/blogs' },
-]
 
 export default function Footer() {
   return (

@@ -3,12 +3,13 @@ import WaveDivider from '../components/WaveDivider'
 import ExperienceCard from '../components/ExperienceCard'
 import HeroTitle from '../components/HeroTitle'
 import ContactMarquee from '../components/ContactMarquee'
-import resumePDF from '../assets/Dominic_Irla_Resume_26-1.pdf'
+import resumePDF from '../assets/Dominic_Irla.pdf'
 import acmImg from '../assets/Experiences/ACM.png'
 import edtImg from '../assets/Experiences/EDT.png'
 import sparkImg from '../assets/Experiences/SparkHacks.png'
 import uicImg from '../assets/Experiences/UICENG.png'
 import wtseImg from '../assets/Experiences/WTSE.jpeg'
+import byteDanceImg from '../assets/ByteDance/team.jpg'
 
 
 
@@ -46,7 +47,7 @@ export default function About() {
 
           {/* Text */}
           <div className="text-center max-w-[75vw] w-200 text-lg">
-            <p className="text-primary">Full stack web developer based in Chicago. I love creating beautiful interfaces and tools that help people in their daily lives. Find out more about my projects, past experiences, and blogs where I ramble on about anything I've learned.</p>
+            <p className="text-primary">Software engineer based in Chicago. I love creating beautiful interfaces and tools that help people in their daily lives. Computer science student at UIC, former ByteDance/TikTok intern, building web tools, embedded systems, and research software.</p>
           </div>
         </div>
 
@@ -71,49 +72,27 @@ export default function About() {
       <div className="relative z-10">
       <WaveDivider />
 
-      {/* Freelance + Resume */}
-      <section className="relative py-16 px-10 max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-16">
-        {/* Freelance — drifting wave */}
-        <div className="relative flex flex-col gap-5">
-          <h3 className="relative text-primary text-2xl font-semibold">Available for Freelance</h3>
-          <p className="relative text-primary/60 text-sm leading-relaxed">
-            I take on freelance projects for people in and around the Chicago area — websites, tools, dashboards, and anything in between. If you have something in mind, reach out.
-          </p>
-          <a
-            href="mailto:irladominic@gmail.com"
-            className="relative w-fit text-secondary text-sm font-medium tracking-widest uppercase border-b border-secondary/40 hover:border-secondary pb-0.5 transition-colors duration-300"
-          >
-            Get in Touch →
-          </a>
-        </div>
-
-        {/* Resume — rotating star */}
-        <div className="relative flex flex-col gap-5">
-          <h3 className="relative text-primary text-2xl font-semibold">For Employers</h3>
-          <p className="relative text-primary/60 text-sm leading-relaxed">
-            Looking to hire? My resume covers my experience, skills, and what I've been building. Feel free to open or download it.
-          </p>
+      {/* Experiences */}
+      <section className="relative py-15 px-10 mb-15">
+        <h2 className="text-primary text-4xl font-semibold text-center mb-4">Past Experiences</h2>
+        <div className="text-center mb-14">
           <a
             href={resumePDF}
             target="_blank"
             rel="noopener noreferrer"
-            className="relative w-fit text-secondary text-sm font-medium tracking-widest uppercase border-b border-secondary/40 hover:border-secondary pb-0.5 transition-colors duration-300"
+            className="text-secondary text-sm font-medium tracking-widest uppercase border-b border-secondary/40 hover:border-secondary pb-0.5 transition-colors duration-300"
           >
             View Resume →
           </a>
         </div>
-      </section>
-
-      {/* Experiences */}
-      <section className="relative py-15 px-10 mb-15">
-        <h2 className="text-primary text-4xl font-semibold text-center mb-14">Past Experiences</h2>
         <div className={`flex flex-col items-center ${isDesktop ? 'gap-12' : 'gap-10'}`}>
           {[
-            { image: acmImg, title: 'ACM @ UIC', description: 'Association of Computer Machining Special Interest Group Leader: Teach UIC students web development through group projects, lectures, and one on one help.', date: 'AUG 2025 - NOW' },
+            { image: byteDanceImg, wide: true, title: 'ByteDance / TikTok', description: "Frontend Software Engineer Intern on the Global Payment team. Built H5 features for TikTok's global BNPL product across SEA and MX/BR, extended frontend work to ~10 screens in the TikTok Shop Android client, and built an AI-powered tool that consolidates 50+ release alerts into one report.", date: 'MAY 2026 - AUG 2026' },
+            { image: uicImg, title: 'UIC Engineering', description: "Web developer for UIC's College of Engineering. Built COEConnect, a unified portal and SDK for auth, mail, and monitoring across ~10 department apps, and lead a team of 4 modernizing legacy apps onto React.", date: 'JUN 2024 - NOW' },
+            { image: wtseImg, title: 'Wearable Technology & Sensory Environment Lab', description: 'Rebuilt a serious-games frontend for patients with tongue mobility issues, streaming a wearable tongue trackpad over Web Bluetooth and engineering its PSoC firmware.', date: 'MAR 2026 - NOW' },
+            { image: sparkImg, title: 'SparkHacks', description: "Web Development Lead for Chicago's largest hackathon. Leading a team of 6 building the application portal for 400+ entries.", date: 'JUL 2025 - NOW' },
+            { image: acmImg, title: 'ACM @ UIC', description: 'Web Development SIG Lead: lead the team building LinkIt, run weekly frontend workshops, and mentor members on code quality.', date: 'SEP 2025 - NOW' },
             { image: edtImg, title: 'EDT', description: 'Engineering Design Team Member: Part of the AiR team, creating automated drones through YOLO. Also, created their website.', date: 'AUG 2024 - DEC 2025' },
-            { image: sparkImg, title: 'SparkHacks', description: "On the webdev team for Chicago's largest hackathon! Created a dashboard for 700+ applicants, and helped run the event.", date: 'OCT 2025 - FEB 2026' },
-            { image: uicImg, title: 'UIC Engineering', description: "Creating internal tools for UIC's engineering department.", date: 'AUG 2024 - NOW' },
-            { image: wtseImg, title: 'Wearable Technology & Sensory Environment Lab', description: 'Designing serious/therapeutical games for patients with tongue mobility issues using a wearable retainer with a trackpad for tongue tracking.'}
           ].map((exp, i) => (
             <div
               key={i}
@@ -127,6 +106,7 @@ export default function About() {
             >
               <ExperienceCard
                 image={exp.image}
+                wide={exp.wide}
                 title={exp.title}
                 description={exp.description}
                 date={exp.date}

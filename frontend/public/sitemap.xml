@@ -5,34 +5,4 @@
     <priority>1.0</priority>
     <changefreq>monthly</changefreq>
   </url>
-  <url>
-    <loc>https://irla.dev/projects</loc>
-    <priority>0.9</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://irla.dev/blogs</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://irla.dev/blogs/revenue-predictor</loc>
-    <priority>0.6</priority>
-    <changefreq>yearly</changefreq>
-  </url>
-  <url>
-    <loc>https://irla.dev/blogs/pogoda</loc>
-    <priority>0.6</priority>
-    <changefreq>yearly</changefreq>
-  </url>
-  <url>
-    <loc>https://irla.dev/blogs/arbitrage</loc>
-    <priority>0.6</priority>
-    <changefreq>yearly</changefreq>
-  </url>
-  <url>
-    <loc>https://irla.dev/blogs/dca-vix-cuda</loc>
-    <priority>0.6</priority>
-    <changefreq>yearly</changefreq>
-  </url>
 </urlset>

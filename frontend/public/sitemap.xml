@@ -5,4 +5,24 @@
     <priority>1.0</priority>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://irla.dev/case-studies</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://irla.dev/case-studies/coeconnect</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://irla.dev/case-studies/research-expenditure</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://irla.dev/case-studies/sparkhacks-dashboard</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>

@@ -84,13 +84,19 @@ export default function About() {
           >
             View Resume →
           </a>
+          <a
+            href="/case-studies"
+            className="ml-8 text-secondary text-sm font-medium tracking-widest uppercase border-b border-secondary/40 hover:border-secondary pb-0.5 transition-colors duration-300"
+          >
+            Case Studies →
+          </a>
         </div>
         <div className={`flex flex-col items-center ${isDesktop ? 'gap-12' : 'gap-10'}`}>
           {[
             { image: byteDanceImg, wide: true, title: 'ByteDance / TikTok', description: "Frontend Software Engineer Intern on the Global Payment team. Built H5 features for TikTok's global BNPL product across SEA and MX/BR, extended frontend work to ~10 screens in the TikTok Shop Android client, and built an AI-powered tool that consolidates 50+ release alerts into one report.", date: 'MAY 2026 - AUG 2026' },
-            { image: uicImg, title: 'UIC Engineering', description: "Web developer for UIC's College of Engineering. Built COEConnect, a unified portal and SDK for auth, mail, and monitoring across ~10 department apps, and lead a team of 4 modernizing legacy apps onto React.", date: 'JUN 2024 - NOW' },
+            { image: uicImg, title: 'UIC Engineering', description: "Web developer for UIC's College of Engineering. Built COEConnect, a unified portal and SDK for auth, mail, and monitoring across ~10 department apps, and lead a team of 4 modernizing legacy apps onto React.", date: 'JUN 2024 - NOW', links: [{ href: '/case-studies/coeconnect', label: 'COEConnect case study →' }, { href: '/case-studies/research-expenditure', label: 'Research Expenditure case study →' }] },
             { image: wtseImg, title: 'Wearable Technology & Sensory Environment Lab', description: 'Rebuilt a serious-games frontend for patients with tongue mobility issues, streaming a wearable tongue trackpad over Web Bluetooth and engineering its PSoC firmware.', date: 'MAR 2026 - NOW' },
-            { image: sparkImg, title: 'SparkHacks', description: "Web Development Lead for Chicago's largest hackathon. Leading a team of 6 building the application portal for 400+ entries.", date: 'JUL 2025 - NOW' },
+            { image: sparkImg, title: 'SparkHacks', description: "Web Development Lead for Chicago's largest hackathon. Leading a team of 6 building the application portal for 2,000+ applicants.", date: 'JUL 2025 - NOW', links: [{ href: '/case-studies/sparkhacks-dashboard', label: 'SparkHacks Dashboard case study →' }] },
             { image: acmImg, title: 'ACM @ UIC', description: 'Web Development SIG Lead: lead the team building LinkIt, run weekly frontend workshops, and mentor members on code quality.', date: 'SEP 2025 - NOW' },
             { image: edtImg, title: 'EDT', description: 'Engineering Design Team Member: Part of the AiR team, creating automated drones through YOLO. Also, created their website.', date: 'AUG 2024 - DEC 2025' },
           ].map((exp, i) => (
@@ -110,6 +116,7 @@ export default function About() {
                 title={exp.title}
                 description={exp.description}
                 date={exp.date}
+                links={exp.links}
                 index={i}
               />
             </div>

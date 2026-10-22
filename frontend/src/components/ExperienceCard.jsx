@@ -46,7 +46,24 @@ const STAR_CONFIG = [
   ],
 ]
 
-export default function ExperienceCard({ image, wide, title, description, date, index }) {
+function CardLinks({ links, align }) {
+  if (!links?.length) return null
+  return (
+    <div className={`flex flex-col gap-1.5 mt-2 ${align}`}>
+      {links.map((l) => (
+        <a
+          key={l.href}
+          href={l.href}
+          className="w-fit text-accent text-sm font-semibold border-b border-accent/40 hover:border-accent pb-0.5 transition-colors duration-300"
+        >
+          {l.label}
+        </a>
+      ))}
+    </div>
+  )
+}
+
+export default function ExperienceCard({ image, wide, title, description, date, links, index }) {
   const ref = useRef(null)
   const pos = useRef({ x: 0, y: 0 })
   const target = useRef({ x: 0, y: 0 })
@@ -125,6 +142,7 @@ export default function ExperienceCard({ image, wide, title, description, date, 
         <h3 className="text-primary text-2xl font-semibold">{title}</h3>
         <p className="text-primary text-sm leading-relaxed max-w-xs">{description}</p>
         <p className="text-secondary text-sm font-semibold">{date}</p>
+        <CardLinks links={links} align="items-center" />
       </div>
     )
   }
@@ -140,6 +158,7 @@ export default function ExperienceCard({ image, wide, title, description, date, 
         <h3 className="text-primary text-2xl font-semibold mb-2">{title}</h3>
         <p className="text-primary text-sm leading-relaxed">{description}</p>
         <p className="text-secondary text-sm font-semibold leading-relaxed">{date}</p>
+        <CardLinks links={links} align={reversed ? 'items-end' : 'items-start'} />
       </div>
     </div>
   )
